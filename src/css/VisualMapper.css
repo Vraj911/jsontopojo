@@ -1,0 +1,32 @@
+.visual-mapper {
+  margin-top: 32px;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.visual-mapper h5 {
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 16px;
+  text-align: center;
+  font-style: italic;
+}
+
+.visual-mapper-content {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.visual-mapper pre {
+  flex: 1 1 45%;
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #333;
+}

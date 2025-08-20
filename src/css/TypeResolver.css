@@ -1,0 +1,16 @@
+.type-resolver {
+  margin-top: 32px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.type-resolver h5 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #555;
+  font-weight: 500;
+  font-style: italic;
+}
