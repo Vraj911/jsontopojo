@@ -11,12 +11,15 @@ function JavaToJson() {
   const [error, setError] = useState('');
   const [copyMsg, setCopyMsg] = useState('');
   const [loading, setLoading] = useState(false);
+    const BACKEND_URL =import.meta.env.VITE_BACKEND_URL; 
+
   const handleConvert = async () => {
     setError('');
     setJsonOutput('');
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8080/java/java-to-json', javaInput, {
+      const response = await axios.post(BACKEND_URL 
+        , javaInput, {
         headers: { 'Content-Type': 'text/plain' },
       });
       if (response.data) {

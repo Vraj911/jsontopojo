@@ -14,6 +14,7 @@ function JsonToJava() {
   const [loading, setLoading] = useState(false);
   const [fields, setFields] = useState([]); 
   const [modifiers, setModifiers] = useState({}); 
+  const BACKEND_URL =import.meta.env.VITE_BACKEND_URL; 
   useEffect(() => {
     try {
       const parsed = JSON.parse(jsonInput);
@@ -43,7 +44,7 @@ function JsonToJava() {
       modifiers: modifiers,
     };
     const response = await axios.post(
-      'http://localhost:8080/java/json-to-java',
+      BACKEND_URL,
       payload,
       {
         headers: {
@@ -64,12 +65,11 @@ function JsonToJava() {
 };
 const loadSample = () => {
   const formattedJson = JSON.stringify(sampleJson, null, 2);
-  setJsonInput(formattedJson); // shows sample JSON in the input box
-  setJavaOutput(sampleJava);   // shows sample Java directly
+  setJsonInput(formattedJson); 
+  setJavaOutput(sampleJava);   
   setError('');
   setCopyMsg('');
 };
-
   const clearAll = () => {
     setJsonInput('');
     setJavaOutput('');
